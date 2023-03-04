@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptSlider" id="Knob1" x="70.0" y="25.0" text="MOD Source"
+             processorId="4 Way Mod Switch" parameterId="SWITCH1"/>
+  <Component type="ScriptSlider" id="Knob2" x="220.0" y="25.0" text="MOD Amount"
+             processorId="4 Way Mod Switch" parameterId="Mod"/>
+</ContentProperties>
