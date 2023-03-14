@@ -3,9 +3,9 @@
 <ContentProperties DeviceType="Desktop">
   <Component type="ScriptSliderPack" id="SliderPack1" x="21.0" y="23.0" itemColour="2006908794"
              itemColour2="2005794631" bgColour="10160393" textColour="13841664"
-             processorId="Scriptnode Syntesiser1" width="200.0" height="160.0"/>
-  <Component type="ScriptSlider" id="OFFSET" x="240.0" y="50.0" processorId="Scriptnode Syntesiser1"
+             processorId="Harmonic Oscillator" width="200.0" height="160.0"/>
+  <Component type="ScriptSlider" id="OFFSET" x="240.0" y="50.0" processorId="Harmonic Oscillator"
              parameterId="Offset"/>
-  <Component type="ScriptSlider" id="SHAPE" x="240.0" y="108.0" processorId="Scriptnode Syntesiser1"
+  <Component type="ScriptSlider" id="SHAPE" x="240.0" y="100" processorId="Harmonic Oscillator"
              parameterId="Shape"/>
 </ContentProperties>

@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ContentProperties DeviceType="Desktop">
-  <Component type="ScriptSliderPack" id="SliderPack1" x="20.0" y="13.0" itemColour="2006908794"
-             itemColour2="2005794631" bgColour="10160393" textColour="13841664"
-             processorId="Morphing Harmonic Oscillator" width="200.0" height="120.0"/>
-  <Component type="ScriptSliderPack" id="SliderPack2" x="230.0" y="13.0" itemColour="2004529663"
+  <Component type="ScriptSliderPack" id="SliderPack1" x="20" y="13" itemColour="2006908794"
              itemColour2="2005794631" bgColour="10160393" textColour="13841664"
              processorId="Morphing Harmonic Oscillator" width="200.0" height="120.0"
-             SliderPackIndex="1"/>
-  <Component type="ScriptSliderPack" id="SliderPack3" x="20.0" y="160.0" itemColour="2013231834"
+             visible="0">
+    <Component type="ScriptLabel" id="Label1" x="0" y="-3" text="1" width="30.0"
+               height="30.0" parentComponent="SliderPack1"/>
+  </Component>
+  <Component type="ScriptSliderPack" id="SliderPack2" x="20" y="13" itemColour="2004529663"
              itemColour2="2005794631" bgColour="10160393" textColour="13841664"
              processorId="Morphing Harmonic Oscillator" width="200.0" height="120.0"
-             SliderPackIndex="2"/>
-  <Component type="ScriptSliderPack" id="SliderPack4" x="230.0" y="160.0"
-             itemColour="2013261178" itemColour2="2005794631" bgColour="10160393"
-             textColour="13841664" processorId="Morphing Harmonic Oscillator"
-             width="200.0" height="120.0" SliderPackIndex="3"/>
-  <Component type="ScriptSlider" id="Crossfade" x="450.0" y="10.0" processorId="Morphing Harmonic Oscillator"
+             SliderPackIndex="1">
+    <Component type="ScriptLabel" id="Label2" x="0" y="-3" text="2" width="30.0"
+               height="30.0" parentComponent="SliderPack2"/>
+  </Component>
+  <Component type="ScriptSliderPack" id="SliderPack3" x="20" y="13" itemColour="2013231834"
+             itemColour2="2005794631" bgColour="10160393" textColour="13841664"
+             processorId="Morphing Harmonic Oscillator" width="200.0" height="120.0"
+             SliderPackIndex="2" visible="0">
+    <Component type="ScriptLabel" id="Label3" x="0" y="-3" text="3" width="30.0"
+               height="30.0" parentComponent="SliderPack3"/>
+  </Component>
+  <Component type="ScriptSliderPack" id="SliderPack4" x="20" y="13" itemColour="2013261178"
+             itemColour2="2005794631" bgColour="10160393" textColour="13841664"
+             processorId="Morphing Harmonic Oscillator" width="200.0" height="120.0"
+             SliderPackIndex="3" visible="0">
+    <Component type="ScriptLabel" id="Label4" x="0" y="-3" text="4" width="30.0"
+               height="30.0" parentComponent="SliderPack4"/>
+  </Component>
+  <Component type="ScriptSlider" id="Crossfade" x="280.0" y="20.0" processorId="MorphingHarmonicOscillator"
              parameterId="XFADE"/>
-  <Component type="ScriptLabel" id="Label1" x="20.0" y="10.0" text="1" width="30.0"
-             height="30.0"/>
-  <Component type="ScriptLabel" id="Label2" x="230.0" y="10.0" text="2" width="30.0"
-             height="30.0"/>
-  <Component type="ScriptLabel" id="Label3" x="20.0" y="160.0" text="3" width="30.0"
-             height="30.0"/>
-  <Component type="ScriptLabel" id="Label4" x="230.0" y="160.0" text="4" width="30.0"
-             height="30.0"/>
-  <Component type="ScriptLabel" id="Label5" x="450.0" y="60.0" alignment="left"
-             width="130" height="60" text="Use the crossfader to morph between the 4 sliderpacks"
+  <Component type="ScriptLabel" id="Label5" x="290.0" y="70.0" alignment="left"
+             width="130.0" height="60.0" text="Use the crossfader to morph between the 4 sliderpacks"
              editable="0"/>
   <Component type="ScriptLabel" id="Label6" x="450.0" y="120.0" alignment="left"
-             width="130" height="60" text=""/>
+             width="130.0" height="60.0" text=""/>
 </ContentProperties>

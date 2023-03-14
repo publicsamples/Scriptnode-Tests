@@ -10,7 +10,7 @@
           <Node ID="xfader" FactoryPath="control.xfader" Bypassed="0">
             <Properties>
               <Property ID="NumParameters" Value="4"/>
-              <Property ID="Mode" Value="RMS"/>
+              <Property ID="Mode" Value="Linear"/>
             </Properties>
             <SwitchTargets>
               <SwitchTarget>
@@ -171,7 +171,7 @@
             </Properties>
             <Nodes>
               <Node ID="clone_child" FactoryPath="container.chain" Bypassed="0" NodeColour="4287927444"
-                    Folded="1" ShowParameters="1">
+                    ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -309,7 +309,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child15" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain15" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -447,7 +447,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child14" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain14" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -585,7 +585,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child13" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain13" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -723,7 +723,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child12" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain12" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -861,7 +861,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child11" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain11" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -999,7 +999,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child10" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain10" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -1137,7 +1137,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child9" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain9" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -1275,7 +1275,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child8" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain8" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -1413,7 +1413,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child7" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain7" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -1551,7 +1551,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child6" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain6" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -1689,7 +1689,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child5" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain5" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -1827,7 +1827,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child4" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain4" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -1965,7 +1965,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child3" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain3" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -2103,7 +2103,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child2" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain2" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -2241,7 +2241,7 @@
                 <Parameters/>
               </Node>
               <Node ID="clone_child1" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="modchain1" FactoryPath="container.modchain" Bypassed="0">
                     <Nodes>
@@ -2400,7 +2400,7 @@
       </Node>
     </Nodes>
     <Parameters>
-      <Parameter ID="XFADE" MinValue="0.0" MaxValue="1.0" Value="1.0">
+      <Parameter ID="XFADE" MinValue="0.0" MaxValue="1.0" Value="0.1124256591796875">
         <Connections>
           <Connection NodeId="xfader" ParameterId="Value"/>
         </Connections>

@@ -9,11 +9,11 @@
         <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
           <ChildProcessors/>
           <Content>
-            <Control type="ScriptSliderPack" id="SliderPack1" value="3.0" data="64.1iB29XOJb6i8nvsOov0C9v0iB4SJb8nOrGEt9zLyL6i8nvsOb8n.+DWOJ7S35QwORgqG+35Qg7yiBWWO......"/>
-            <Control type="ScriptSliderPack" id="SliderPack2" value="15" data="64.Jb8H8zLyL2SJb8fOrGEN9fqGE5ydT3pO8nv09fT356SJb8vOyLyL+T35Q8y0iB2O...f+....9C...3O...f+."/>
-            <Control type="ScriptSliderPack" id="SliderPack3" value="12" data="64....f+fqGE8Sb8nvOeT359PgqG6iT35oOeT3Z9nYlY3C6QgaOJb8n7nv0ivC..........7Qgq4C...vOZlYF9."/>
-            <Control type="ScriptSliderPack" id="SliderPack4" value="0.0" data="64.rGEN9................nv0iviBWOJOOJb88vdT33yGEtlO6Qgq9XlYl6SJb8vOCWOJ+v0iB8SOJb0OCWOZ+."/>
-            <Control type="ScriptSlider" id="Crossfade" value="0.2899999916553497"/>
+            <Control type="ScriptSliderPack" id="SliderPack1" value="5.0" data="64.................OJb88DWOJ5iBWOxO...f+...........MyLy9jBWO5C..........................."/>
+            <Control type="ScriptSliderPack" id="SliderPack2" value="13.0" data="64....f+....9S35QoOgqGk9nYlY5iT35oORgqm9HEtd5ilYloOov0i9fqGE5yGEtlOeT3Z97Qgq4C...3O...f+."/>
+            <Control type="ScriptSliderPack" id="SliderPack3" value="13.0" data="64.MyLy8fqGE3SOJbkOyLyr9PgqG6i8nvsO1iB29XOJb6i8nvsO1iB29ziBW6ydT3pOJb8H9nv0i1C6QgaOJb8n8."/>
+            <Control type="ScriptSliderPack" id="SliderPack4" value="0.0" data="64...........viBWOOOJbc9jBWO5CWOJrOrGEt9Lb8n5S35QoOgqGk9nv0i1SyLyjO...f+....9y0iBuOWOJ79."/>
+            <Control type="ScriptSlider" id="Crossfade" value="0.7200000286102295"/>
           </Content>
           <UIData Source="MorphingHarmonicOscillatorUIData"/>
         </Processor>

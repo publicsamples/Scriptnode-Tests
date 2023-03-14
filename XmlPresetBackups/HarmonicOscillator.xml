@@ -9,9 +9,9 @@
         <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
           <ChildProcessors/>
           <Content>
-            <Control type="ScriptSliderPack" id="SliderPack1" value="15" data="64.b8nP+7Qgq7S35QwO35QA+7Qgq6SyLyrO6Qgq9jBWO5SOJbkOov0C9jBWO1C..........................."/>
-            <Control type="ScriptSlider" id="OFFSET" value="0.6000000238418579"/>
-            <Control type="ScriptSlider" id="SHAPE" value="0.0"/>
+            <Control type="ScriptSliderPack" id="SliderPack1" value="3" data="64.ZlYl9nv0i5CRgquOlYlY+nv0i8SOJb0Oov0S+DWOJ8CtdTzOb8nP+fT357yLyLyOWOJL+7Qgq7iqGExOZlYF+."/>
+            <Control type="ScriptSlider" id="OFFSET" value="0.6499999761581421"/>
+            <Control type="ScriptSlider" id="SHAPE" value="0.1500000059604645"/>
           </Content>
           <UIData Source="HarmonicOscillatorUIData"/>
         </Processor>
@@ -26,7 +26,7 @@
     <Processor Type="EffectChain" ID="FX" Bypassed="0">
       <ChildProcessors/>
     </Processor>
-    <Processor Type="ScriptSynth" ID="Harmonic Oscillator" Bypassed="0" Gain="0.25"
+    <Processor Type="ScriptSynth" ID="Harmonic Oscillator" Bypassed="0" Gain="0.01258925441652536"
                Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                NumSliderPacks="1">
       <ChildProcessors>
