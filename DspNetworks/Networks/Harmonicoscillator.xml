@@ -47,7 +47,7 @@
             </Properties>
             <Nodes>
               <Node ID="clone_child" FactoryPath="container.chain" Bypassed="0" NodeColour="4287927444"
-                    Folded="1" ShowParameters="1">
+                    ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -77,14 +77,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child15" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic30" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -114,14 +114,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child14" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic29" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -151,14 +151,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child13" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic28" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -188,14 +188,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child12" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic27" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -225,14 +225,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child11" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic26" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -262,14 +262,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child10" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic25" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -299,14 +299,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child9" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic24" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -336,14 +336,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child8" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic23" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -373,14 +373,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child7" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic22" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -410,14 +410,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child6" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic21" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -447,14 +447,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child5" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic20" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -484,14 +484,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child4" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic19" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -521,14 +521,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child3" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic18" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -558,14 +558,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child2" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic17" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -595,14 +595,14 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
               <Node ID="clone_child1" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" Folded="1" ShowParameters="1">
+                    NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
                   <Node ID="harmonic16" FactoryPath="control.minmax" Bypassed="0">
                     <ModulationTargets>
@@ -632,7 +632,7 @@
                                  Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
                     </Parameters>
                   </Node>
                 </Nodes>
@@ -650,12 +650,12 @@
       </Node>
     </Nodes>
     <Parameters>
-      <Parameter ID="Offset" MinValue="0.0" MaxValue="1.0" Value="1.0">
+      <Parameter ID="Offset" MinValue="0.0" MaxValue="1.0" Value="0.324828125">
         <Connections>
           <Connection NodeId="clone_pack" ParameterId="Value"/>
         </Connections>
       </Parameter>
-      <Parameter ID="Shape" MinValue="0.0" MaxValue="1.0" Value="1.0">
+      <Parameter ID="Shape" MinValue="0.0" MaxValue="1.0" Value="0.05917187499999998">
         <Connections>
           <Connection NodeId="clone_cable" ParameterId="Value"/>
         </Connections>
