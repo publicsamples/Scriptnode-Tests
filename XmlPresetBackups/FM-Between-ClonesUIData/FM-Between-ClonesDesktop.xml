@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptSliderPack" id="SliderPack1" x="34.0" y="8.0" processorId="SwitchnodeSyntesiser1"
+             width="130.0" height="130.0"/>
+  <Component type="ScriptSlider" id="Knob1" x="30.0" y="172.0" text="WAVEFORM1"
+             processorId="SwitchnodeSyntesiser1" parameterId="Wave1"/>
+  <Component type="ScriptSlider" id="Knob2" x="190.0" y="172.0" text="WAVEFORM2"
+             processorId="SwitchnodeSyntesiser1" parameterId="Wave2"/>
+  <Component type="ScriptSlider" id="Knob3" x="30.0" y="232.0" text="WAVEFORM3"
+             processorId="SwitchnodeSyntesiser1" parameterId="Wave3"/>
+  <Component type="ScriptSlider" id="Knob4" x="190.0" y="232.0" text="WAVEFORM4"
+             processorId="SwitchnodeSyntesiser1" parameterId="Wave4"/>
+  <Component type="ScriptLabel" id="Label1" x="420.0" y="10.0" alignment="left"
+             width="140.0" height="30.0" text="FM Between Clones" editable="0"
+             fontSize="15.0"/>
+  <Component type="ScriptSliderPack" id="SliderPack2" x="90.0" y="260.0" processorId="SwitchnodeSyntesiser1"
+             width="80.0" height="30.0" SliderPackIndex="1" enabled="0" visible="0"/>
+  <Component type="ScriptSliderPack" id="SliderPack3" x="90.0" y="260.0" processorId="SwitchnodeSyntesiser1"
+             width="80.0" height="30.0" SliderPackIndex="2" enabled="0" visible="0"/>
+  <Component type="ScriptSliderPack" id="SliderPack4" x="90.0" y="260.0" processorId="SwitchnodeSyntesiser1"
+             width="80.0" height="30.0" SliderPackIndex="3" enabled="0" visible="0"/>
+  <Component type="ScriptSliderPack" id="SliderPack5" x="90.0" y="260.0" processorId="SwitchnodeSyntesiser1"
+             width="80.0" height="30.0" SliderPackIndex="4" enabled="0" visible="0"/>
+  <Component type="ScriptSliderPack" id="SliderPack14" x="199.0" y="8.0" width="130.0"
+             height="130.0" processorId="SwitchnodeSyntesiser1" SliderPackIndex="13"/>
+  <Component type="ScriptSlider" id="Knob5" x="410.0" y="116.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm1"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob6" x="454.0" y="116.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm2"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob7" x="497.0" y="116.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm3"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob8" x="541.0" y="116.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm4"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob9" x="541.0" y="157.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm8"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob10" x="497.0" y="157.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="m7"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob11" x="454.0" y="157.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm6"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob12" x="410.0" y="157.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm5"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob13" x="410.0" y="234.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm13"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob14" x="454.0" y="234.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm14"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob15" x="497.0" y="234.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm15"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob16" x="541.0" y="234.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm16"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob17" x="541.0" y="197.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm12"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob18" x="497.0" y="197.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm11"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob19" x="454.0" y="197.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm10"
+             middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob20" x="410.0" y="197.0" width="30.0"
+             height="30.0" processorId="SwitchnodeSyntesiser1" parameterId="fm9"
+             middlePosition="0.5"/>
+  <Component type="ScriptLabel" id="Label2" x="467.0" y="50.0" alignment="left"
+             width="50.0" height="30.0" text="FM IN" editable="0" fontSize="15.0"/>
+  <Component type="ScriptLabel" id="Label3" x="354.0" y="117.0" alignment="left"
+             width="50.0" height="30.0" text="STAGE 1" editable="0" fontSize="12.0"/>
+  <Component type="ScriptLabel" id="Label4" x="354.0" y="157.0" alignment="left"
+             width="50.0" height="30.0" text="STAGE 2" editable="0" fontSize="12.0"/>
+  <Component type="ScriptLabel" id="Label5" x="354.0" y="197.0" alignment="left"
+             width="50.0" height="30.0" text="STAGE 3" editable="0" fontSize="12.0"/>
+  <Component type="ScriptLabel" id="Label6" x="354.0" y="234.0" alignment="left"
+             width="50.0" height="30.0" text="STAGE 4" editable="0" fontSize="12.0"/>
+  <Component type="ScriptLabel" id="Label7" x="399.0" y="82.0" alignment="left"
+             width="50.0" height="30.0" text="STAGE 1" editable="0" fontSize="12.0"/>
+  <Component type="ScriptLabel" id="Label8" x="448.0" y="82.0" alignment="left"
+             width="50.0" height="30.0" text="STAGE 2" editable="0" fontSize="12.0"/>
+  <Component type="ScriptLabel" id="Label9" x="497.0" y="82.0" alignment="left"
+             width="50.0" height="30.0" text="STAGE 3" editable="0" fontSize="12.0"/>
+  <Component type="ScriptLabel" id="Label10" x="546.0" y="82.0" alignment="left"
+             width="50.0" height="30.0" text="STAGE 4" editable="0" fontSize="12.0"/>
+  <Component type="ScriptLabel" id="Label11" x="77.0" y="144.0" alignment="left"
+             width="50.0" height="30.0" text="PITCH" editable="0" fontSize="12.0"/>
+  <Component type="ScriptLabel" id="Label12" x="245.0" y="142.0" alignment="left"
+             width="50.0" height="30.0" text="VOL" editable="0" fontSize="12.0"/>
+</ContentProperties>

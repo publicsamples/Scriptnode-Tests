@@ -1,4 +1,4 @@
-Content.makeFrontInterface(600, 600);function onNoteOn()
+Content.makeFrontInterface(600, 300);function onNoteOn()
 {
 	
 }

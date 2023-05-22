@@ -9,15 +9,15 @@
         <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
           <ChildProcessors/>
           <Content>
-            <Control type="ScriptSliderPack" id="SliderPack1" value="2" data="16.yLyr9....5ilYlgO......"/>
-            <Control type="ScriptSlider" id="Knob1" value="0.6000000238418579"/>
-            <Control type="ScriptSlider" id="Knob2" value="0.2800000011920929"/>
+            <Control type="ScriptSliderPack" id="SliderPack1" value="2" data="16............tdTnOb8n.+."/>
+            <Control type="ScriptSlider" id="Knob1" value="0.4399999976158142"/>
+            <Control type="ScriptSlider" id="Knob2" value="1.0"/>
             <Control type="ScriptSlider" id="Knob3" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob4" value="0.2099999934434891"/>
-            <Control type="ScriptSliderPack" id="SliderPack2" value="1.0" data="16....f+................."/>
-            <Control type="ScriptSliderPack" id="SliderPack3" value="3.0" data="16..........9C..........."/>
-            <Control type="ScriptSliderPack" id="SliderPack4" value="3.0" data="16...............3O......"/>
-            <Control type="ScriptSliderPack" id="SliderPack5" value="2.0" data="16....................f+."/>
+            <Control type="ScriptSlider" id="Knob4" value="0.0"/>
+            <Control type="ScriptSliderPack" id="SliderPack2" value="3" data="16....f+................."/>
+            <Control type="ScriptSliderPack" id="SliderPack3" value="3" data="16..........9C..........."/>
+            <Control type="ScriptSliderPack" id="SliderPack4" value="3" data="16...............3O......"/>
+            <Control type="ScriptSliderPack" id="SliderPack5" value="0" data="16....................f+."/>
           </Content>
           <UIData Source="Control-Individual-Clone-ValuesUIData"/>
         </Processor>
@@ -32,7 +32,7 @@
     <Processor Type="EffectChain" ID="FX" Bypassed="0">
       <ChildProcessors/>
     </Processor>
-    <Processor Type="ScriptSynth" ID="Scriptnode Syntesiser1" Bypassed="0" Gain="0.25"
+    <Processor Type="ScriptSynth" ID="SwitchnodeSyntesiser1" Bypassed="0" Gain="0.25"
                Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                NumSliderPacks="5">
       <ChildProcessors>

@@ -17,7 +17,7 @@
   <Component type="ScriptSlider" id="Knob6" x="238.0" y="110.0" processorId="Sample FM"
              width="120.0" height="50.0" parameterId="VOL" text="Volume"/>
   <Component type="ScriptSlider" id="Knob7" x="410.0" y="100.0" processorId="Sample FM"
-             width="100" height="50" parameterId="OSC-B-PITCH" text="Pitch"
+             width="100.0" height="50.0" parameterId="OSC-B-PITCH" text="Pitch"
              max="24.0" stepSize="0.1000000014901161"/>
   <Component type="ScriptSlider" id="Knob8" x="410.0" y="240.0" processorId="Sample FM"
              width="120.0" height="50.0" parameterId="FilterFM" text="OSC 2 FFM"
@@ -30,5 +30,5 @@
   <Component type="ScriptSlider" id="Knob11" x="410.0" y="170.0" processorId="Sample FM"
              width="120.0" height="50.0" parameterId="Feedback" text="Feedback"/>
   <Component type="ScriptButton" id="Button1" x="520.0" y="110.0" processorId="Sample FM"
-             parameterId="Track" width="70" height="30" text="Track"/>
+             parameterId="Track" width="70.0" height="30.0" text="Track"/>
 </ContentProperties>

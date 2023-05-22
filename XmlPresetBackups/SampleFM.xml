@@ -13,16 +13,16 @@
                      rangeStart="0" rangeEnd="0"/>
             <Control type="ScriptAudioWaveform" id="AudioWaveform2" value="0.0" data="{XYZ::SampleMap}CS-Saw"
                      rangeStart="0" rangeEnd="0"/>
-            <Control type="ScriptSlider" id="Knob1" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob2" value="0.5400000214576721"/>
+            <Control type="ScriptSlider" id="Knob1" value="0.5199999809265137"/>
+            <Control type="ScriptSlider" id="Knob2" value="-0.009999999776482582"/>
             <Control type="ScriptSlider" id="mix" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob4" value="0.3100000023841858"/>
-            <Control type="ScriptSlider" id="Knob6" value="0.4900000095367432"/>
-            <Control type="ScriptSlider" id="Knob7" value="1.0"/>
-            <Control type="ScriptSlider" id="Knob8" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob9" value="0.6299999952316284"/>
-            <Control type="ScriptSlider" id="Knob10" value="0.0"/>
-            <Control type="ScriptSlider" id="Knob11" value="0.25"/>
+            <Control type="ScriptSlider" id="Knob4" value="1.0"/>
+            <Control type="ScriptSlider" id="Knob6" value="0.0"/>
+            <Control type="ScriptSlider" id="Knob7" value="12.19999980926514"/>
+            <Control type="ScriptSlider" id="Knob8" value="0.09000000357627869"/>
+            <Control type="ScriptSlider" id="Knob9" value="1.0"/>
+            <Control type="ScriptSlider" id="Knob10" value="0.7300000190734863"/>
+            <Control type="ScriptSlider" id="Knob11" value="0.8399999737739563"/>
             <Control type="ScriptButton" id="Button1" value="1.0"/>
           </Content>
           <UIData Source="SampleFMUIData"/>
@@ -38,9 +38,9 @@
     <Processor Type="EffectChain" ID="FX" Bypassed="0">
       <ChildProcessors/>
     </Processor>
-    <Processor Type="ScriptSynth" ID="Sample FM" Bypassed="0" Gain="0.25" Balance="0.0"
-               VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0" NumAudioFiles="2"
-               NumDisplayBuffers="2">
+    <Processor Type="ScriptSynth" ID="Sample FM" Bypassed="0" Gain="0.8511380553245544"
+               Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
+               NumAudioFiles="2" NumDisplayBuffers="2">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
