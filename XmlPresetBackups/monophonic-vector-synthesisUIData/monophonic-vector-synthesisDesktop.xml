@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptSlider" id="XFADE" x="270.0" y="57.0" processorId="XFADE"
+             isMetaParameter="1" parameterId="xfade"/>
+  <Component type="ScriptSlider" id="Smoothing" x="270.0" y="121.0" processorId="XFADE"
+             isMetaParameter="1" parameterId="smooth"/>
+  <Component type="ScriptSlider" id="LFO Depth" x="270.0" y="188.0" processorId="XFADE"
+             isMetaParameter="1" parameterId="LFO_mod"/>
+  <Component type="ScriptSlider" id="LFO Speed" x="270.0" y="255.0" processorId="XFADE"
+             isMetaParameter="1" parameterId="LFO_speed"/>
+  <Component type="ScriptComboBox" id="ComboBox1" x="120.0" y="60.0" max="9"
+             processorId="WAVE1" parameterId="WaveForm1" items="Sine&#10;Triangle&#10;Saw&#10;Square&#10;Noise&#10;Triangle 2&#10;Square 2&#10;Trapezoid 1&#10;Trapezoid 2"/>
+  <Component type="ScriptComboBox" id="ComboBox2" x="120.0" y="107.0" max="9"
+             processorId="WAVE2" parameterId="WaveForm1" items="Sine&#10;Triangle&#10;Saw&#10;Square&#10;Noise&#10;Triangle 2&#10;Square 2&#10;Trapezoid 1&#10;Trapezoid 2"/>
+  <Component type="ScriptComboBox" id="ComboBox3" x="120.0" y="155.0" max="9"
+             processorId="WAVE2" parameterId="WaveForm1" items="Sine&#10;Triangle&#10;Saw&#10;Square&#10;Noise&#10;Triangle 2&#10;Square 2&#10;Trapezoid 1&#10;Trapezoid 2"/>
+  <Component type="ScriptComboBox" id="ComboBox4" x="120.0" y="202.0" max="9"
+             processorId="WAVE2" parameterId="WaveForm1" items="Sine&#10;Triangle&#10;Saw&#10;Square&#10;Noise&#10;Triangle 2&#10;Square 2&#10;Trapezoid 1&#10;Trapezoid 2"/>
+  <Component type="ScriptComboBox" id="ComboBox5" x="120.0" y="250.0" max="9"
+             processorId="WAVE2" parameterId="WaveForm1" width="128.0" height="32.0"
+             items="Sine&#10;Triangle&#10;Saw&#10;Square&#10;Noise&#10;Triangle 2&#10;Square 2&#10;Trapezoid 1&#10;Trapezoid 2"/>
+  <Component type="ScriptComboBox" id="ComboBox6" x="120.0" y="297.0" max="9"
+             processorId="WAVE2" parameterId="WaveForm1" width="128.0" height="32.0"
+             items="Sine&#10;Triangle&#10;Saw&#10;Square&#10;Noise&#10;Triangle 2&#10;Square 2&#10;Trapezoid 1&#10;Trapezoid 2"/>
+  <Component type="ScriptComboBox" id="ComboBox7" x="120.0" y="345.0" max="9"
+             processorId="WAVE2" parameterId="WaveForm1" width="128.0" height="32.0"
+             items="Sine&#10;Triangle&#10;Saw&#10;Square&#10;Noise&#10;Triangle 2&#10;Square 2&#10;Trapezoid 1&#10;Trapezoid 2"/>
+  <Component type="ScriptComboBox" id="ComboBox8" x="120.0" y="393.0" max="9"
+             processorId="WAVE2" parameterId="WaveForm1" width="128.0" height="32.0"
+             items="Sine&#10;Triangle&#10;Saw&#10;Square&#10;Noise&#10;Triangle 2&#10;Square 2&#10;Trapezoid 1&#10;Trapezoid 2"/>
+</ContentProperties>

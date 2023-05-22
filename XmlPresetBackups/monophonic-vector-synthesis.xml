@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Processor Type="SynthChain" ID="monophonic-vector-synthesis" Bypassed="0"
+           Gain="1.0" Balance="0.0" VoiceLimit="64.0" KillFadeTime="20.0"
+           IconColour="0" packageName="" BuildVersion="650">
+  <ChildProcessors>
+    <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+      <ChildProcessors>
+        <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
+          <ChildProcessors/>
+          <Content>
+            <Control type="ScriptSlider" id="XFADE" value="0.4199999868869781"/>
+            <Control type="ScriptSlider" id="Smoothing" value="0.1500000059604645"/>
+            <Control type="ScriptSlider" id="LFO Depth" value="1.0"/>
+            <Control type="ScriptSlider" id="LFO Speed" value="0.2800000011920929"/>
+            <Control type="ScriptComboBox" id="ComboBox1" value="1.0"/>
+            <Control type="ScriptComboBox" id="ComboBox2" value="2.0"/>
+            <Control type="ScriptComboBox" id="ComboBox3" value="6.0"/>
+            <Control type="ScriptComboBox" id="ComboBox4" value="1.0"/>
+            <Control type="ScriptComboBox" id="ComboBox5" value="2.0"/>
+            <Control type="ScriptComboBox" id="ComboBox6" value="7.0"/>
+            <Control type="ScriptComboBox" id="ComboBox7" value="1.0"/>
+            <Control type="ScriptComboBox" id="ComboBox8" value="1.0"/>
+          </Content>
+          <UIData Source="monophonic-vector-synthesisUIData"/>
+        </Processor>
+      </ChildProcessors>
+    </Processor>
+    <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="1" Intensity="0.0">
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="EffectChain" ID="FX" Bypassed="0">
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="GlobalModulatorContainer" ID="global" Bypassed="0" Gain="0.25"
+               Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Global Modulators" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="ScriptTimeVariantModulator" ID="XFADE" Bypassed="0" Intensity="1.0"
+                       Bipolar="0">
+              <ChildProcessors/>
+              <Content/>
+              <Networks>
+                <Network ID="XFADEx8" AllowPolyphonic="1" Version="0.0.0">
+                  <Node FactoryPath="container.chain" ID="XFADEx8" Bypassed="0" ShowParameters="1">
+                    <Nodes>
+                      <Node ID="XFADER" FactoryPath="container.chain" Bypassed="0">
+                        <Nodes>
+                          <Node ID="xfader1" FactoryPath="control.xfader" Bypassed="0">
+                            <Properties>
+                              <Property ID="NumParameters" Value="8"/>
+                              <Property ID="Mode" Value="Switch"/>
+                            </Properties>
+                            <SwitchTargets>
+                              <SwitchTarget>
+                                <Connections>
+                                  <Connection NodeId="smooth1" ParameterId="Value"/>
+                                </Connections>
+                              </SwitchTarget>
+                              <SwitchTarget>
+                                <Connections>
+                                  <Connection NodeId="smooth2" ParameterId="Value"/>
+                                </Connections>
+                              </SwitchTarget>
+                              <SwitchTarget>
+                                <Connections>
+                                  <Connection NodeId="smooth3" ParameterId="Value"/>
+                                </Connections>
+                              </SwitchTarget>
+                              <SwitchTarget>
+                                <Connections>
+                                  <Connection NodeId="smooth4" ParameterId="Value"/>
+                                </Connections>
+                              </SwitchTarget>
+                              <SwitchTarget>
+                                <Connections>
+                                  <Connection NodeId="smooth5" ParameterId="Value"/>
+                                </Connections>
+                              </SwitchTarget>
+                              <SwitchTarget>
+                                <Connections>
+                                  <Connection NodeId="smooth6" ParameterId="Value"/>
+                                </Connections>
+                              </SwitchTarget>
+                              <SwitchTarget>
+                                <Connections>
+                                  <Connection NodeId="smooth7" ParameterId="Value"/>
+                                </Connections>
+                              </SwitchTarget>
+                              <SwitchTarget>
+                                <Connections>
+                                  <Connection NodeId="smooth8" ParameterId="Value"/>
+                                </Connections>
+                              </SwitchTarget>
+                            </SwitchTargets>
+                            <Parameters>
+                              <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                            </Parameters>
+                          </Node>
+                          <Node ID="split1" FactoryPath="container.split" Bypassed="0" ShowParameters="1">
+                            <Nodes>
+                              <Node ID="node1" FactoryPath="container.chain" Bypassed="0">
+                                <Nodes>
+                                  <Node ID="smooth1" FactoryPath="control.smoothed_parameter" Bypassed="0">
+                                    <Properties>
+                                      <Property ID="Mode" Value="Linear Ramp"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                      <Parameter MinValue="0.1000000014901161" MaxValue="1000.0" StepSize="0.1000000014901161"
+                                                 ID="SmoothingTime" Automated="1"/>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Enabled" Value="1.0"/>
+                                    </Parameters>
+                                    <ModulationTargets>
+                                      <Connection NodeId="cable1" ParameterId="Value"/>
+                                    </ModulationTargets>
+                                  </Node>
+                                  <Node ID="cable1" FactoryPath="routing.global_cable" Bypassed="0" NodeColour="4282864818">
+                                    <Properties>
+                                      <Property ID="Connection" Value="v1"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                    </Parameters>
+                                  </Node>
+                                </Nodes>
+                                <Parameters/>
+                              </Node>
+                              <Node ID="node2" FactoryPath="container.chain" Bypassed="0">
+                                <Nodes>
+                                  <Node ID="smooth2" FactoryPath="control.smoothed_parameter" Bypassed="0">
+                                    <Properties>
+                                      <Property ID="Mode" Value="Linear Ramp"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                      <Parameter MinValue="0.1000000014901161" MaxValue="1000.0" StepSize="0.1000000014901161"
+                                                 ID="SmoothingTime" Automated="1"/>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Enabled" Value="1.0"/>
+                                    </Parameters>
+                                    <ModulationTargets>
+                                      <Connection NodeId="cable2" ParameterId="Value"/>
+                                    </ModulationTargets>
+                                  </Node>
+                                  <Node ID="cable2" FactoryPath="routing.global_cable" Bypassed="0" NodeColour="4282930098">
+                                    <Properties>
+                                      <Property ID="Connection" Value="v2"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                    </Parameters>
+                                  </Node>
+                                </Nodes>
+                                <Parameters/>
+                              </Node>
+                              <Node ID="node3" FactoryPath="container.chain" Bypassed="0">
+                                <Nodes>
+                                  <Node ID="smooth3" FactoryPath="control.smoothed_parameter" Bypassed="0">
+                                    <Properties>
+                                      <Property ID="Mode" Value="Linear Ramp"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                      <Parameter MinValue="0.1000000014901161" MaxValue="1000.0" StepSize="0.1000000014901161"
+                                                 ID="SmoothingTime" Automated="1"/>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Enabled" Value="1.0"/>
+                                    </Parameters>
+                                    <ModulationTargets>
+                                      <Connection NodeId="cable3" ParameterId="Value"/>
+                                    </ModulationTargets>
+                                  </Node>
+                                  <Node ID="cable3" FactoryPath="routing.global_cable" Bypassed="0" NodeColour="4282864562">
+                                    <Properties>
+                                      <Property ID="Connection" Value="v3"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                    </Parameters>
+                                  </Node>
+                                </Nodes>
+                                <Parameters/>
+                              </Node>
+                              <Node ID="node4" FactoryPath="container.chain" Bypassed="0">
+                                <Nodes>
+                                  <Node ID="smooth4" FactoryPath="control.smoothed_parameter" Bypassed="0">
+                                    <Properties>
+                                      <Property ID="Mode" Value="Linear Ramp"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                      <Parameter MinValue="0.1000000014901161" MaxValue="1000.0" StepSize="0.1000000014901161"
+                                                 ID="SmoothingTime" Automated="1"/>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Enabled" Value="1.0"/>
+                                    </Parameters>
+                                    <ModulationTargets>
+                                      <Connection NodeId="cable4" ParameterId="Value"/>
+                                    </ModulationTargets>
+                                  </Node>
+                                  <Node ID="cable4" FactoryPath="routing.global_cable" Bypassed="0" NodeColour="4282864818">
+                                    <Properties>
+                                      <Property ID="Connection" Value="v4"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                    </Parameters>
+                                  </Node>
+                                </Nodes>
+                                <Parameters/>
+                              </Node>
+                              <Node ID="node5" FactoryPath="container.chain" Bypassed="0">
+                                <Nodes>
+                                  <Node ID="smooth5" FactoryPath="control.smoothed_parameter" Bypassed="0">
+                                    <Properties>
+                                      <Property ID="Mode" Value="Linear Ramp"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                      <Parameter MinValue="0.1000000014901161" MaxValue="1000.0" StepSize="0.1000000014901161"
+                                                 ID="SmoothingTime" Automated="1"/>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Enabled" Value="1.0"/>
+                                    </Parameters>
+                                    <ModulationTargets>
+                                      <Connection NodeId="cable5" ParameterId="Value"/>
+                                    </ModulationTargets>
+                                  </Node>
+                                  <Node ID="cable5" FactoryPath="routing.global_cable" Bypassed="0" NodeColour="4282930098">
+                                    <Properties>
+                                      <Property ID="Connection" Value="v5"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                    </Parameters>
+                                  </Node>
+                                </Nodes>
+                                <Parameters/>
+                              </Node>
+                              <Node ID="node6" FactoryPath="container.chain" Bypassed="0">
+                                <Nodes>
+                                  <Node ID="smooth6" FactoryPath="control.smoothed_parameter" Bypassed="0">
+                                    <Properties>
+                                      <Property ID="Mode" Value="Linear Ramp"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                      <Parameter MinValue="0.1000000014901161" MaxValue="1000.0" StepSize="0.1000000014901161"
+                                                 ID="SmoothingTime" Automated="1"/>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Enabled" Value="1.0"/>
+                                    </Parameters>
+                                    <ModulationTargets>
+                                      <Connection NodeId="cable6" ParameterId="Value"/>
+                                    </ModulationTargets>
+                                  </Node>
+                                  <Node ID="cable6" FactoryPath="routing.global_cable" Bypassed="0" NodeColour="4282864818">
+                                    <Properties>
+                                      <Property ID="Connection" Value="v6"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                    </Parameters>
+                                  </Node>
+                                </Nodes>
+                                <Parameters/>
+                              </Node>
+                              <Node ID="node7" FactoryPath="container.chain" Bypassed="0">
+                                <Nodes>
+                                  <Node ID="smooth7" FactoryPath="control.smoothed_parameter" Bypassed="0">
+                                    <Properties>
+                                      <Property ID="Mode" Value="Linear Ramp"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                      <Parameter MinValue="0.1000000014901161" MaxValue="1000.0" StepSize="0.1000000014901161"
+                                                 ID="SmoothingTime" Automated="1"/>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Enabled" Value="1.0"/>
+                                    </Parameters>
+                                    <ModulationTargets>
+                                      <Connection NodeId="cable7" ParameterId="Value"/>
+                                    </ModulationTargets>
+                                  </Node>
+                                  <Node ID="cable7" FactoryPath="routing.global_cable" Bypassed="0" NodeColour="4282930098">
+                                    <Properties>
+                                      <Property ID="Connection" Value="v7"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                    </Parameters>
+                                  </Node>
+                                </Nodes>
+                                <Parameters/>
+                              </Node>
+                              <Node ID="node8" FactoryPath="container.chain" Bypassed="0">
+                                <Nodes>
+                                  <Node ID="smooth8" FactoryPath="control.smoothed_parameter" Bypassed="0">
+                                    <Properties>
+                                      <Property ID="Mode" Value="Linear Ramp"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                      <Parameter MinValue="0.1000000014901161" MaxValue="1000.0" StepSize="0.1000000014901161"
+                                                 ID="SmoothingTime" Automated="1"/>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Enabled" Value="1.0"/>
+                                    </Parameters>
+                                    <ModulationTargets>
+                                      <Connection NodeId="cable8" ParameterId="Value"/>
+                                    </ModulationTargets>
+                                  </Node>
+                                  <Node ID="cable8" FactoryPath="routing.global_cable" Bypassed="0" NodeColour="4282864306">
+                                    <Properties>
+                                      <Property ID="Connection" Value="v8"/>
+                                    </Properties>
+                                    <Parameters>
+                                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                                    </Parameters>
+                                  </Node>
+                                </Nodes>
+                                <Parameters/>
+                              </Node>
+                            </Nodes>
+                            <Parameters/>
+                          </Node>
+                        </Nodes>
+                        <Parameters/>
+                      </Node>
+                      <Node ID="chain" FactoryPath="container.chain" Bypassed="0">
+                        <Nodes>
+                          <Node ID="oscillator" FactoryPath="core.oscillator" Bypassed="0">
+                            <ComplexData>
+                              <DisplayBuffers>
+                                <DisplayBuffer Index="-1"/>
+                              </DisplayBuffers>
+                            </ComplexData>
+                            <Parameters>
+                              <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Value="0.0"/>
+                              <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045584686382"
+                                         ID="Frequency" Automated="1"/>
+                              <Parameter MinValue="0.0" MaxValue="10.0" ID="Freq Ratio" Value="0.0"/>
+                              <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
+                              <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
+                              <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                            </Parameters>
+                          </Node>
+                          <Node ID="peak" FactoryPath="core.peak" Bypassed="0">
+                            <ModulationTargets>
+                              <Connection NodeId="pma" ParameterId="Value"/>
+                            </ModulationTargets>
+                            <ComplexData>
+                              <DisplayBuffers>
+                                <DisplayBuffer Index="-1"/>
+                              </DisplayBuffers>
+                            </ComplexData>
+                            <Parameters/>
+                          </Node>
+                          <Node ID="pma" FactoryPath="control.pma" Bypassed="0">
+                            <ModulationTargets>
+                              <Connection NodeId="xfader1" ParameterId="Value"/>
+                            </ModulationTargets>
+                            <Parameters>
+                              <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                              <Parameter MinValue="-1.0" MaxValue="1.0" ID="Multiply" Automated="1"/>
+                              <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
+                            </Parameters>
+                          </Node>
+                        </Nodes>
+                        <Parameters/>
+                      </Node>
+                    </Nodes>
+                    <Parameters>
+                      <Parameter ID="smooth" MinValue="0.0" MaxValue="1.0" Value="0.2532745971679687">
+                        <Connections>
+                          <Connection NodeId="smooth1" ParameterId="SmoothingTime"/>
+                          <Connection NodeId="smooth2" ParameterId="SmoothingTime"/>
+                          <Connection NodeId="smooth3" ParameterId="SmoothingTime"/>
+                          <Connection NodeId="smooth4" ParameterId="SmoothingTime"/>
+                          <Connection NodeId="smooth5" ParameterId="SmoothingTime"/>
+                          <Connection NodeId="smooth6" ParameterId="SmoothingTime"/>
+                          <Connection NodeId="smooth7" ParameterId="SmoothingTime"/>
+                          <Connection NodeId="smooth8" ParameterId="SmoothingTime"/>
+                        </Connections>
+                      </Parameter>
+                      <Parameter ID="xfade" MinValue="0.0" MaxValue="1.0" Value="0.5639539794921875">
+                        <Connections>
+                          <Connection NodeId="pma" ParameterId="Add"/>
+                        </Connections>
+                      </Parameter>
+                      <Parameter ID="LFO_mod" MinValue="0.0" MaxValue="1.0" Value="0.9620755615234374">
+                        <Connections>
+                          <Connection NodeId="pma" ParameterId="Multiply"/>
+                        </Connections>
+                      </Parameter>
+                      <Parameter ID="LFO_speed" MinValue="0.0" MaxValue="1.0" Value="0.4421207275390625">
+                        <Connections>
+                          <Connection NodeId="oscillator" ParameterId="Frequency"/>
+                        </Connections>
+                      </Parameter>
+                    </Parameters>
+                  </Node>
+                </Network>
+              </Networks>
+              <UIData>
+                <ContentProperties DeviceType="Desktop"/>
+              </UIData>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="WaveSynth" ID="WAVE1" Bypassed="0" Gain="0.25" Balance="0.0"
+               VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0" OctaveTranspose1="0.0"
+               OctaveTranspose2="0.0" Detune1="0.0" Detune2="0.0" WaveForm1="1.0"
+               WaveForm2="3.0" Pan1="0.0" Pan2="0.0" Mix="0.0" EnableSecondOscillator="1.0"
+               PulseWidth1="0.5" PulseWidth2="0.5" HardSync="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope1" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" Attack="5.0" Release="10.0" LinearMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="ScriptTimeVariantModulator" ID="XFADE MOD IN" Bypassed="0"
+                       Intensity="1.0">
+              <ChildProcessors/>
+              <Content/>
+              <Networks>
+                <Network ID="node1" Version="0.0.0" AllowPolyphonic="1">
+                  <Node FactoryPath="container.chain" ID="node1" Bypassed="0">
+                    <Nodes>
+                      <Node ID="global_cable" FactoryPath="routing.global_cable" Bypassed="1"
+                            NodeColour="4282864818">
+                        <Properties>
+                          <Property ID="Connection" Value="v1"/>
+                        </Properties>
+                        <ModulationTargets>
+                          <Connection NodeId="add" ParameterId="Value"/>
+                        </ModulationTargets>
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                        </Parameters>
+                      </Node>
+                      <Node ID="add" FactoryPath="math.add" Bypassed="0">
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                        </Parameters>
+                      </Node>
+                    </Nodes>
+                    <Parameters/>
+                  </Node>
+                </Network>
+              </Networks>
+              <UIData>
+                <ContentProperties DeviceType="Desktop"/>
+              </UIData>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Mix Modulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Osc2 Pitch Modulation" Bypassed="0"
+                   Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="WaveSynth" ID="WAVE2" Bypassed="0" Gain="0.25" Balance="0.0"
+               VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0" OctaveTranspose1="0.0"
+               OctaveTranspose2="0.0" Detune1="0.0" Detune2="0.0" WaveForm1="1.0"
+               WaveForm2="3.0" Pan1="0.0" Pan2="0.0" Mix="0.0" EnableSecondOscillator="1.0"
+               PulseWidth1="0.5" PulseWidth2="0.5" HardSync="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope2" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" Attack="5.0" Release="10.0" LinearMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="ScriptTimeVariantModulator" ID="XFADE MOD IN2" Bypassed="0"
+                       Intensity="1.0">
+              <ChildProcessors/>
+              <Content/>
+              <Networks>
+                <Network ID="node2" Version="0.0.0">
+                  <Node FactoryPath="container.chain" ID="node2" Bypassed="0">
+                    <Nodes>
+                      <Node ID="global_cable" FactoryPath="routing.global_cable" Bypassed="0"
+                            NodeColour="4282930098">
+                        <Properties>
+                          <Property ID="Connection" Value="v2"/>
+                        </Properties>
+                        <ModulationTargets>
+                          <Connection NodeId="add" ParameterId="Value"/>
+                        </ModulationTargets>
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                        </Parameters>
+                      </Node>
+                      <Node ID="add" FactoryPath="math.add" Bypassed="0">
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                        </Parameters>
+                      </Node>
+                    </Nodes>
+                    <Parameters/>
+                  </Node>
+                </Network>
+              </Networks>
+              <UIData>
+                <ContentProperties DeviceType="Desktop"/>
+              </UIData>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Mix Modulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Osc2 Pitch Modulation" Bypassed="0"
+                   Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="WaveSynth" ID="WAVE3" Bypassed="0" Gain="0.25" Balance="0.0"
+               VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0" OctaveTranspose1="0.0"
+               OctaveTranspose2="0.0" Detune1="0.0" Detune2="0.0" WaveForm1="3.0"
+               WaveForm2="3.0" Pan1="0.0" Pan2="0.0" Mix="0.0" EnableSecondOscillator="1.0"
+               PulseWidth1="0.5" PulseWidth2="0.5" HardSync="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope3" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" Attack="5.0" Release="10.0" LinearMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="ScriptTimeVariantModulator" ID="XFADE MOD IN3" Bypassed="0"
+                       Intensity="1.0">
+              <ChildProcessors/>
+              <Content/>
+              <Networks>
+                <Network ID="node3" Version="0.0.0">
+                  <Node FactoryPath="container.chain" ID="node3" Bypassed="0">
+                    <Nodes>
+                      <Node ID="global_cable" FactoryPath="routing.global_cable" Bypassed="0"
+                            NodeColour="4282864562">
+                        <Properties>
+                          <Property ID="Connection" Value="v3"/>
+                        </Properties>
+                        <ModulationTargets>
+                          <Connection NodeId="add1" ParameterId="Value"/>
+                        </ModulationTargets>
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                        </Parameters>
+                      </Node>
+                      <Node ID="add1" FactoryPath="math.add" Bypassed="0">
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                        </Parameters>
+                      </Node>
+                    </Nodes>
+                    <Parameters/>
+                  </Node>
+                </Network>
+              </Networks>
+              <UIData>
+                <ContentProperties DeviceType="Desktop"/>
+              </UIData>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Mix Modulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Osc2 Pitch Modulation" Bypassed="0"
+                   Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="WaveSynth" ID="WAVE4" Bypassed="0" Gain="0.25" Balance="0.0"
+               VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0" OctaveTranspose1="0.0"
+               OctaveTranspose2="0.0" Detune1="0.0" Detune2="0.0" WaveForm1="4.0"
+               WaveForm2="3.0" Pan1="0.0" Pan2="0.0" Mix="0.0" EnableSecondOscillator="1.0"
+               PulseWidth1="0.5" PulseWidth2="0.5" HardSync="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope4" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" Attack="5.0" Release="10.0" LinearMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="ScriptTimeVariantModulator" ID="XFADE MOD IN4" Bypassed="0"
+                       Intensity="1.0">
+              <ChildProcessors/>
+              <Content/>
+              <Networks>
+                <Network ID="node4" Version="0.0.0">
+                  <Node FactoryPath="container.chain" ID="node4" Bypassed="0">
+                    <Nodes>
+                      <Node ID="global_cable" FactoryPath="routing.global_cable" Bypassed="0"
+                            NodeColour="4282864818">
+                        <Properties>
+                          <Property ID="Connection" Value="v4"/>
+                        </Properties>
+                        <ModulationTargets>
+                          <Connection NodeId="add" ParameterId="Value"/>
+                        </ModulationTargets>
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                        </Parameters>
+                      </Node>
+                      <Node ID="add" FactoryPath="math.add" Bypassed="0">
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                        </Parameters>
+                      </Node>
+                    </Nodes>
+                    <Parameters/>
+                  </Node>
+                </Network>
+              </Networks>
+              <UIData>
+                <ContentProperties DeviceType="Desktop"/>
+              </UIData>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Mix Modulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Osc2 Pitch Modulation" Bypassed="0"
+                   Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="WaveSynth" ID="WAVE5" Bypassed="0" Gain="0.25" Balance="0.0"
+               VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0" OctaveTranspose1="0.0"
+               OctaveTranspose2="0.0" Detune1="0.0" Detune2="0.0" WaveForm1="6.0"
+               WaveForm2="3.0" Pan1="0.0" Pan2="0.0" Mix="0.0" EnableSecondOscillator="1.0"
+               PulseWidth1="0.5" PulseWidth2="0.5" HardSync="1.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope5" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" Attack="5.0" Release="10.0" LinearMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="ScriptTimeVariantModulator" ID="XFADE MOD IN5" Bypassed="0"
+                       Intensity="1.0">
+              <ChildProcessors/>
+              <Content/>
+              <Networks>
+                <Network ID="node5" Version="0.0.0">
+                  <Node FactoryPath="container.chain" ID="node5" Bypassed="0">
+                    <Nodes>
+                      <Node ID="global_cable" FactoryPath="routing.global_cable" Bypassed="0"
+                            NodeColour="4282930098">
+                        <Properties>
+                          <Property ID="Connection" Value="v5"/>
+                        </Properties>
+                        <ModulationTargets>
+                          <Connection NodeId="add" ParameterId="Value"/>
+                        </ModulationTargets>
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                        </Parameters>
+                      </Node>
+                      <Node ID="add" FactoryPath="math.add" Bypassed="0">
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                        </Parameters>
+                      </Node>
+                    </Nodes>
+                    <Parameters/>
+                  </Node>
+                </Network>
+              </Networks>
+              <UIData>
+                <ContentProperties DeviceType="Desktop"/>
+              </UIData>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Mix Modulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Osc2 Pitch Modulation" Bypassed="0"
+                   Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="WaveSynth" ID="WAVE6" Bypassed="0" Gain="0.25" Balance="0.0"
+               VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0" OctaveTranspose1="0.0"
+               OctaveTranspose2="1.0" Detune1="0.0" Detune2="0.0" WaveForm1="7.0"
+               WaveForm2="3.0" Pan1="0.0" Pan2="0.0" Mix="0.4300000071525574"
+               EnableSecondOscillator="0.0" PulseWidth1="0.5" PulseWidth2="0.5"
+               HardSync="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope6" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" Attack="5.0" Release="10.0" LinearMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="ScriptTimeVariantModulator" ID="XFADE MOD IN6" Bypassed="0"
+                       Intensity="1.0">
+              <ChildProcessors/>
+              <Content/>
+              <Networks>
+                <Network ID="node6" Version="0.0.0">
+                  <Node FactoryPath="container.chain" ID="node6" Bypassed="0">
+                    <Nodes>
+                      <Node ID="global_cable" FactoryPath="routing.global_cable" Bypassed="0"
+                            NodeColour="4282864818">
+                        <Properties>
+                          <Property ID="Connection" Value="v6"/>
+                        </Properties>
+                        <ModulationTargets>
+                          <Connection NodeId="add" ParameterId="Value"/>
+                        </ModulationTargets>
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                        </Parameters>
+                      </Node>
+                      <Node ID="add" FactoryPath="math.add" Bypassed="0">
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                        </Parameters>
+                      </Node>
+                    </Nodes>
+                    <Parameters/>
+                  </Node>
+                </Network>
+              </Networks>
+              <UIData>
+                <ContentProperties DeviceType="Desktop"/>
+              </UIData>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Mix Modulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Osc2 Pitch Modulation" Bypassed="0"
+                   Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="WaveSynth" ID="WAVE7" Bypassed="0" Gain="0.25" Balance="0.0"
+               VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0" OctaveTranspose1="0.0"
+               OctaveTranspose2="3.0" Detune1="0.0" Detune2="0.0" WaveForm1="8.0"
+               WaveForm2="3.0" Pan1="0.0" Pan2="0.0" Mix="0.0" EnableSecondOscillator="1.0"
+               PulseWidth1="0.5" PulseWidth2="0.5" HardSync="1.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope7" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" Attack="5.0" Release="10.0" LinearMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="ScriptTimeVariantModulator" ID="XFADE MOD IN7" Bypassed="0"
+                       Intensity="1.0">
+              <ChildProcessors/>
+              <Content/>
+              <Networks>
+                <Network ID="node7" Version="0.0.0">
+                  <Node FactoryPath="container.chain" ID="node7" Bypassed="0">
+                    <Nodes>
+                      <Node ID="global_cable" FactoryPath="routing.global_cable" Bypassed="0"
+                            NodeColour="4282930098">
+                        <Properties>
+                          <Property ID="Connection" Value="v7"/>
+                        </Properties>
+                        <ModulationTargets>
+                          <Connection NodeId="add" ParameterId="Value"/>
+                        </ModulationTargets>
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                        </Parameters>
+                      </Node>
+                      <Node ID="add" FactoryPath="math.add" Bypassed="0">
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                        </Parameters>
+                      </Node>
+                    </Nodes>
+                    <Parameters/>
+                  </Node>
+                </Network>
+              </Networks>
+              <UIData>
+                <ContentProperties DeviceType="Desktop"/>
+              </UIData>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Mix Modulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Osc2 Pitch Modulation" Bypassed="0"
+                   Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="WaveSynth" ID="WAVE8" Bypassed="0" Gain="0.25" Balance="0.0"
+               VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0" OctaveTranspose1="0.0"
+               OctaveTranspose2="1.0" Detune1="0.0" Detune2="-49.43000030517578"
+               WaveForm1="4.0" WaveForm2="3.0" Pan1="0.0" Pan2="0.0" Mix="0.0"
+               EnableSecondOscillator="1.0" PulseWidth1="0.1700000017881393"
+               PulseWidth2="0.5" HardSync="1.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope8" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" Attack="5.0" Release="10.0" LinearMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="ScriptTimeVariantModulator" ID="XFADE MOD IN8" Bypassed="0"
+                       Intensity="1.0">
+              <ChildProcessors/>
+              <Content/>
+              <Networks>
+                <Network ID="node8" Version="0.0.0">
+                  <Node FactoryPath="container.chain" ID="node8" Bypassed="0">
+                    <Nodes>
+                      <Node ID="global_cable" FactoryPath="routing.global_cable" Bypassed="0"
+                            NodeColour="4282864306">
+                        <Properties>
+                          <Property ID="Connection" Value="v8"/>
+                        </Properties>
+                        <ModulationTargets>
+                          <Connection NodeId="add1" ParameterId="Value"/>
+                        </ModulationTargets>
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                        </Parameters>
+                      </Node>
+                      <Node ID="add1" FactoryPath="math.add" Bypassed="0">
+                        <Parameters>
+                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                        </Parameters>
+                      </Node>
+                    </Nodes>
+                    <Parameters/>
+                  </Node>
+                </Network>
+              </Networks>
+              <UIData>
+                <ContentProperties DeviceType="Desktop"/>
+              </UIData>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Mix Modulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Osc2 Pitch Modulation" Bypassed="0"
+                   Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+  </ChildProcessors>
+  <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+  <macro_controls>
+    <macro name="Macro 1" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 2" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 3" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 4" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 5" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 6" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 7" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 8" value="0.0" midi_cc="-1"/>
+  </macro_controls>
+  <MidiAutomation/>
+  <MPEData Enabled="0"/>
+</Processor>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptSlider" id="XFADE" x="10.0" y="64.0" isMetaParameter="1"/>
+  <Component type="ScriptSlider" id="Smoothing" x="10.0" y="119.0" isMetaParameter="1"/>
+  <Component type="ScriptSlider" id="LFO Depth" x="10.0" y="174.0" isMetaParameter="1"/>
+  <Component type="ScriptSlider" id="LFO Speed" x="10.0" y="230.0" isMetaParameter="1"/>
+  <Component type="ScriptButton" id="Enable" x="15.0" y="26.0" text="Mono/Poly"/>
+</ContentProperties>
