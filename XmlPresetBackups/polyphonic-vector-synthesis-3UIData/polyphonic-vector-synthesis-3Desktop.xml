@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptSlider" id="fade" x="11.0" y="27.0"/>
+  <Component type="ScriptSlider" id="fademod" x="157.0" y="27.0" min="-1.0"/>
+  <Component type="ScriptSlider" id="attack" x="304.0" y="27.0" min="-1.0"/>
+  <Component type="ScriptSlider" id="release" x="451.0" y="27.0" middlePosition="0.5"/>
+</ContentProperties>
