@@ -119,7 +119,7 @@
         </Nodes>
         <Parameters/>
       </Node>
-      <Node ID="no_midi" FactoryPath="container.no_midi" Bypassed="0" Folded="1">
+      <Node ID="no_midi" FactoryPath="container.no_midi" Bypassed="0">
         <Nodes>
           <Node ID="SHAPES" FactoryPath="container.split" Bypassed="0" Comment="Sets the waveform for each clone">
             <Nodes>

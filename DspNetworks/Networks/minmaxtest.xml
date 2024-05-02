@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Network ID="minmaxtest" AllowCompilation="1" AllowPolyphonic="1" Version="0.0.0">
+<Network ID="minmaxtest" AllowPolyphonic="1" Version="0.0.0">
   <Node FactoryPath="container.chain" ID="minmaxtest" Bypassed="0">
     <Nodes>
       <Node ID="clone_pack1" FactoryPath="control.clone_pack" Bypassed="0">
@@ -75,8 +75,7 @@
               <Node ID="file_player16" FactoryPath="core.file_player" Bypassed="0">
                 <ComplexData>
                   <AudioFiles>
-                    <AudioFile Index="-1" EmbeddedData="{XYZ::SampleMap}CS-Saw" MinValue="0"
-                               MaxValue="0"/>
+                    <AudioFile Index="-1" EmbeddedData="" MinValue="0" MaxValue="0"/>
                   </AudioFiles>
                 </ComplexData>
                 <Parameters>

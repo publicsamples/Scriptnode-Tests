@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptButton" id="Button1" x="284.0" y="62.0" saveInPreset="0"
+             width="120.0" height="40.0" text="Random" isMomentary="1"/>
+  <Component type="ScriptSliderPack" id="SliderPack1" x="19.0" y="25.0" processorId="Interface"
+             saveInPreset="0" defaultValue="0.0" width="250.0" height="170.0"
+             sliderAmount="4.0" min="1.0" max="127.0" itemColour="2008104510"
+             stepSize="1.0"/>
+  <Component type="ScriptButton" id="undoBtn" x="284.0" y="161.0" isMomentary="1"
+             saveInPreset="0" width="120.0" height="40.0" text="UNDO"/>
+  <Component type="ScriptButton" id="redoBtn" x="284.0" y="111.0" isMomentary="1"
+             saveInPreset="0" width="120.0" height="40.0" text="REDO"/>
+  <Component type="ScriptSlider" id="Knob1" x="284.0" y="13.0" middlePosition="0.5"
+             stepSize="0.1000000014901161" height="40.0" width="120.0"/>
+</ContentProperties>

@@ -9,12 +9,21 @@
 
 // Include compiled network files -------------------------------
 
+#include "CloneTEst_networkdata.h"
+#include "clone_individual_values_FM_networkdata.h"
+#include "clone_individual_values_MOD_networkdata.h"
+#include "clone_individual_values_networkdata.h"
+#include "EnvTest_networkdata.h"
+#include "Harmonicoscillator.h"
 #include "HarmonicOscillatorwithsliderpackmorphing_networkdata.h"
-#include "Harmonicoscillator_networkdata.h"
-#include "minmaxtest.h"
+#include "minmaxtest_networkdata.h"
+#include "node1_networkdata.h"
 #include "SampleFM_networkdata.h"
 #include "Switch_networkdata.h"
 #include "WeirdDelay_networkdata.h"
+#include "xf2_networkdata.h"
+#include "xf3_networkdata.h"
+#include "xf_networkdata.h"
 #include "_4WaySwitch_networkdata.h"
 
 #if (defined (_WIN32) || defined (_WIN64))

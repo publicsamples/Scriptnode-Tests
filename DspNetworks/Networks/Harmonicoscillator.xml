@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Network ID="Harmonicoscillator" AllowPolyphonic="1" Version="0.0.0">
+<Network ID="Harmonicoscillator" AllowPolyphonic="1" Version="0.0.0" AllowCompilation="1">
   <Node FactoryPath="container.chain" ID="Harmonicoscillator" Bypassed="0"
         ShowParameters="1">
     <Nodes>
@@ -10,7 +10,7 @@
             <Nodes>
               <Node ID="clone_pack" FactoryPath="control.clone_pack" Bypassed="0">
                 <ModulationTargets>
-                  <Connection NodeId="harmonic" ParameterId="Value"/>
+                  <Connection NodeId="oscillator" ParameterId="Freq Ratio"/>
                 </ModulationTargets>
                 <ComplexData>
                   <SliderPacks>
@@ -19,7 +19,7 @@
                 </ComplexData>
                 <Parameters>
                   <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="NumClones"
-                             Value="1.0"/>
+                             Value="4.0"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
                 </Parameters>
               </Node>
@@ -32,7 +32,7 @@
                 </ModulationTargets>
                 <Parameters>
                   <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="NumClones"
-                             Value="16.0"/>
+                             Value="4.0"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                 </Parameters>
@@ -49,465 +49,7 @@
               <Node ID="clone_child" FactoryPath="container.chain" Bypassed="0" NodeColour="4287927444"
                     ShowParameters="1">
                 <Nodes>
-                  <Node ID="harmonic" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
                   <Node ID="oscillator" FactoryPath="core.oscillator" Bypassed="0">
-                    <ComplexData>
-                      <DisplayBuffers>
-                        <DisplayBuffer Index="-1"/>
-                      </DisplayBuffers>
-                    </ComplexData>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                      <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
-                    </Parameters>
-                  </Node>
-                </Nodes>
-                <Parameters/>
-              </Node>
-              <Node ID="clone_child15" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" ShowParameters="1">
-                <Nodes>
-                  <Node ID="harmonic30" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator15" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
-                  <Node ID="oscillator15" FactoryPath="core.oscillator" Bypassed="0">
-                    <ComplexData>
-                      <DisplayBuffers>
-                        <DisplayBuffer Index="-1"/>
-                      </DisplayBuffers>
-                    </ComplexData>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                      <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
-                    </Parameters>
-                  </Node>
-                </Nodes>
-                <Parameters/>
-              </Node>
-              <Node ID="clone_child14" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" ShowParameters="1">
-                <Nodes>
-                  <Node ID="harmonic29" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator14" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
-                  <Node ID="oscillator14" FactoryPath="core.oscillator" Bypassed="0">
-                    <ComplexData>
-                      <DisplayBuffers>
-                        <DisplayBuffer Index="-1"/>
-                      </DisplayBuffers>
-                    </ComplexData>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                      <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
-                    </Parameters>
-                  </Node>
-                </Nodes>
-                <Parameters/>
-              </Node>
-              <Node ID="clone_child13" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" ShowParameters="1">
-                <Nodes>
-                  <Node ID="harmonic28" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator13" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
-                  <Node ID="oscillator13" FactoryPath="core.oscillator" Bypassed="0">
-                    <ComplexData>
-                      <DisplayBuffers>
-                        <DisplayBuffer Index="-1"/>
-                      </DisplayBuffers>
-                    </ComplexData>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                      <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
-                    </Parameters>
-                  </Node>
-                </Nodes>
-                <Parameters/>
-              </Node>
-              <Node ID="clone_child12" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" ShowParameters="1">
-                <Nodes>
-                  <Node ID="harmonic27" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator12" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
-                  <Node ID="oscillator12" FactoryPath="core.oscillator" Bypassed="0">
-                    <ComplexData>
-                      <DisplayBuffers>
-                        <DisplayBuffer Index="-1"/>
-                      </DisplayBuffers>
-                    </ComplexData>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                      <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
-                    </Parameters>
-                  </Node>
-                </Nodes>
-                <Parameters/>
-              </Node>
-              <Node ID="clone_child11" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" ShowParameters="1">
-                <Nodes>
-                  <Node ID="harmonic26" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator11" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
-                  <Node ID="oscillator11" FactoryPath="core.oscillator" Bypassed="0">
-                    <ComplexData>
-                      <DisplayBuffers>
-                        <DisplayBuffer Index="-1"/>
-                      </DisplayBuffers>
-                    </ComplexData>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                      <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
-                    </Parameters>
-                  </Node>
-                </Nodes>
-                <Parameters/>
-              </Node>
-              <Node ID="clone_child10" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" ShowParameters="1">
-                <Nodes>
-                  <Node ID="harmonic25" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator10" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
-                  <Node ID="oscillator10" FactoryPath="core.oscillator" Bypassed="0">
-                    <ComplexData>
-                      <DisplayBuffers>
-                        <DisplayBuffer Index="-1"/>
-                      </DisplayBuffers>
-                    </ComplexData>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                      <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
-                    </Parameters>
-                  </Node>
-                </Nodes>
-                <Parameters/>
-              </Node>
-              <Node ID="clone_child9" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" ShowParameters="1">
-                <Nodes>
-                  <Node ID="harmonic24" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator9" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
-                  <Node ID="oscillator9" FactoryPath="core.oscillator" Bypassed="0">
-                    <ComplexData>
-                      <DisplayBuffers>
-                        <DisplayBuffer Index="-1"/>
-                      </DisplayBuffers>
-                    </ComplexData>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                      <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
-                    </Parameters>
-                  </Node>
-                </Nodes>
-                <Parameters/>
-              </Node>
-              <Node ID="clone_child8" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" ShowParameters="1">
-                <Nodes>
-                  <Node ID="harmonic23" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator8" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
-                  <Node ID="oscillator8" FactoryPath="core.oscillator" Bypassed="0">
-                    <ComplexData>
-                      <DisplayBuffers>
-                        <DisplayBuffer Index="-1"/>
-                      </DisplayBuffers>
-                    </ComplexData>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                      <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
-                    </Parameters>
-                  </Node>
-                </Nodes>
-                <Parameters/>
-              </Node>
-              <Node ID="clone_child7" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" ShowParameters="1">
-                <Nodes>
-                  <Node ID="harmonic22" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator7" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
-                  <Node ID="oscillator7" FactoryPath="core.oscillator" Bypassed="0">
-                    <ComplexData>
-                      <DisplayBuffers>
-                        <DisplayBuffer Index="-1"/>
-                      </DisplayBuffers>
-                    </ComplexData>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                      <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
-                    </Parameters>
-                  </Node>
-                </Nodes>
-                <Parameters/>
-              </Node>
-              <Node ID="clone_child6" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" ShowParameters="1">
-                <Nodes>
-                  <Node ID="harmonic21" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator6" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
-                  <Node ID="oscillator6" FactoryPath="core.oscillator" Bypassed="0">
-                    <ComplexData>
-                      <DisplayBuffers>
-                        <DisplayBuffer Index="-1"/>
-                      </DisplayBuffers>
-                    </ComplexData>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                      <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
-                    </Parameters>
-                  </Node>
-                </Nodes>
-                <Parameters/>
-              </Node>
-              <Node ID="clone_child5" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" ShowParameters="1">
-                <Nodes>
-                  <Node ID="harmonic20" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator5" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
-                  <Node ID="oscillator5" FactoryPath="core.oscillator" Bypassed="0">
-                    <ComplexData>
-                      <DisplayBuffers>
-                        <DisplayBuffer Index="-1"/>
-                      </DisplayBuffers>
-                    </ComplexData>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                      <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
-                    </Parameters>
-                  </Node>
-                </Nodes>
-                <Parameters/>
-              </Node>
-              <Node ID="clone_child4" FactoryPath="container.chain" Bypassed="0"
-                    NodeColour="4287927444" ShowParameters="1">
-                <Nodes>
-                  <Node ID="harmonic19" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator4" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
-                  <Node ID="oscillator4" FactoryPath="core.oscillator" Bypassed="0">
                     <ComplexData>
                       <DisplayBuffers>
                         <DisplayBuffer Index="-1"/>
@@ -530,20 +72,6 @@
               <Node ID="clone_child3" FactoryPath="container.chain" Bypassed="0"
                     NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
-                  <Node ID="harmonic18" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator3" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
                   <Node ID="oscillator3" FactoryPath="core.oscillator" Bypassed="0">
                     <ComplexData>
                       <DisplayBuffers>
@@ -551,11 +79,10 @@
                       </DisplayBuffers>
                     </ComplexData>
                     <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode"/>
                       <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
                                  SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
+                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
@@ -567,20 +94,6 @@
               <Node ID="clone_child2" FactoryPath="container.chain" Bypassed="0"
                     NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
-                  <Node ID="harmonic17" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator2" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
                   <Node ID="oscillator2" FactoryPath="core.oscillator" Bypassed="0">
                     <ComplexData>
                       <DisplayBuffers>
@@ -588,11 +101,10 @@
                       </DisplayBuffers>
                     </ComplexData>
                     <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode"/>
                       <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
                                  SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
+                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
@@ -604,20 +116,6 @@
               <Node ID="clone_child1" FactoryPath="container.chain" Bypassed="0"
                     NodeColour="4287927444" ShowParameters="1">
                 <Nodes>
-                  <Node ID="harmonic16" FactoryPath="control.minmax" Bypassed="0">
-                    <ModulationTargets>
-                      <Connection NodeId="oscillator1" ParameterId="Freq Ratio"/>
-                    </ModulationTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Minimum" Value="1.0"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Maximum" Value="16.0"/>
-                      <Parameter MinValue="0.1000000014901161" MaxValue="10.0" SkewFactor="0.2890648245811462"
-                                 ID="Skew" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Step" Value="1.0"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Polarity" Value="0.0"/>
-                    </Parameters>
-                  </Node>
                   <Node ID="oscillator1" FactoryPath="core.oscillator" Bypassed="0">
                     <ComplexData>
                       <DisplayBuffers>
@@ -625,11 +123,10 @@
                       </DisplayBuffers>
                     </ComplexData>
                     <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode"/>
                       <Parameter MinValue="20.00000029802322" MaxValue="20000.0" StepSize="0.1000000014901161"
                                  SkewFactor="0.2299045622348785" ID="Frequency" Value="220"/>
-                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"
-                                 Automated="1"/>
+                      <Parameter MinValue="1.0" MaxValue="16.0" StepSize="1.0" ID="Freq Ratio"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="0.130796875"/>
@@ -640,7 +137,7 @@
               </Node>
             </Nodes>
             <Parameters>
-              <Parameter MinValue="1.0" MaxValue="16" StepSize="1.0" ID="NumClones" Value="16.0"/>
+              <Parameter MinValue="1.0" MaxValue="4" StepSize="1.0" ID="NumClones" Value="4.0"/>
               <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="SplitSignal"
                          Value="2.0"/>
             </Parameters>
